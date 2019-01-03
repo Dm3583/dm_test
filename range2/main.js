@@ -17,7 +17,7 @@ function num(){
         calculateTax(this.valueAsNumber,redBlock)
     }
     input.oninput = function(){
-        input.value>100 ? input.value = 100: range.valueAsNumber=this.value;
+        this.value>100 ? this.value=range.valueAsNumber = 100 : range.valueAsNumber=this.value;
         greenBlock.style.height = this.value+"px";
         calculateTax(this.value,redBlock)
     }
