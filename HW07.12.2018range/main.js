@@ -26,11 +26,7 @@ function num(){
 // function setRange(num,block){
 //     return block.style.height=num+"px";
 // }
-// function setRange(block){
 
-//     document.getElementById('range').valueAsNumber=input.value;
-//     return block.style.height=parseInt(input.value)+"px";
-// }
 
 // function comission(num,block){
 //     if(num==0){return block.style.height=0+"px",
