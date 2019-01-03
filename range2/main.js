@@ -24,23 +24,18 @@ function num(){
 }
 
 function calculateTax(n,block){
-
     if(n==0){
-        block.style.height=0+"px",
-        block.style.bottom=n+"px";
+        block.style.height=0+"px"
     }else if(n>0&&n<20){
-        block.style.height=2+"px",
-        block.style.bottom=n+"px";
+        block.style.height=2+"px"
     }else if(n>=20&&n<50){
-        block.style.height=4+"px",
-        block.style.bottom=n+"px";
+        block.style.height=4+"px"
     }else if(n>=50&&n<75){
-        block.style.height=6+"px",
-        block.style.bottom=n+"px";
+        block.style.height=6+"px"
     }else{
-        block.style.height=8+"px",
-        block.style.bottom=n+"px";
+        block.style.height=8+"px"
     }
+block.style.bottom=n+"px";
 
 }
 
