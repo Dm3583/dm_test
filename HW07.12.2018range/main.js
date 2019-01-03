@@ -4,7 +4,8 @@ var range = document.querySelector('#range');
 var input = document.querySelector('#number');
 var greenBlock = document.querySelector('.green-block');
 var redBlock = document.querySelector('.red-block');
-var heightGreen = (document.getElementById('range').valueAsNumber=input.value);
+var heightGreen = 0;
+range.valueAsNumber=input.value;
 
 
 function num(){
@@ -12,7 +13,7 @@ function num(){
         return input.value = 100;
     }
     range.oninput = function(){
-        return heightGreen=input.value=range.value;
+        return input.value=range.value;
     }
     input.oninput = function(){
         return document.getElementById('range').valueAsNumber=input.value;
