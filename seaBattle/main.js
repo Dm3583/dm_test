@@ -11,14 +11,10 @@ class PlayField{
             for(let j = 0; j < field[i].length; j++){
                 field[i][j] = 0;
             }
-            // console.log(field[i]);
-            // document.write('\n');
         }
         return field;
     }
 }
-
-// PlayField.createField();
 
 class Ship{
     constructor(x,y,size,direction){
@@ -47,6 +43,7 @@ var ship14=new Ship(6,6,1,'row');
 var ship15=new Ship(9,6,2,'row');
 var ship16=new Ship(4,8,3,'column');
 var ship17=new Ship(2,7,2,'column');
+// console.log(typeof ship4.direction);
 
 
 var f1 = new PlayField("Player");
@@ -95,9 +92,6 @@ class Controller{
                         }
                     return list2;
                 });
-            
-                // console.log(list2);
-
 
             list2.forEach((item,i,list2)=>{
                 battleField[item.y-1][item.x-1]=1;
@@ -112,53 +106,39 @@ class Controller{
                     }
                 }
             });
-        return console.log(battleField);
+        return battleField;
     }
-    shoot(){}
+    shoot(field,x,y){
+            field[y-1][x-1]=8;
+         return field;
+    }
     startGame(){}
     endGame(){}
 }
 
-
-new Controller(f1).setShip([ship1,ship2,ship3,ship4,ship5,ship6,ship7,ship8,ship9,ship10,ship11,ship12,ship13,ship14,ship15,ship16,ship17]);
-
-
-
-
-
-var f1 = new PlayField("Player");
-var f2 = new PlayField("Computer");
-// console.log(f1);
-
-
-// f1.createField();
-
-
-
-// console.log(f2);
-// f2.createField();
-
-function arr(){
-
-var arr= new Array(10);
-
-    for(let k = 0; k<arr.length; k++){
-        arr[k] = new Array(10);
-        for(let p = 0; p<arr[k].length; p++){
-            arr[k][p]=0
-        }
-        // console.log(arr[k]);
-        
+class Player_{
+    constructor(name,field){
+        this.name=name;
+        this.field=field;
     }
-
-    return arr;
+    render(){
+        console.log(this.name,this.field);
+    }
 }
 
-// arr();
 
-// function setChar(n,m,array){
-//     array[n][m]=5;
-//     return array;
-// }
+var play = new Controller(f1).setShip([ship1,ship2,ship3,ship4,ship5,ship6,ship7,ship8,ship9,ship10,ship11,ship12,ship13,ship14,ship15,ship16,ship17]);
 
-// console.log(setChar(1,1,f1.createField()));
+var shoot = new Controller().shoot(play,9,4);
+
+var player = new Player_(f1,shoot);
+
+player.render();
+
+var f2 = new PlayField("Computer");
+
+var comp=new Controller(f2).setShip([ship1,ship2,ship3,ship4,ship5,ship9,ship10,ship11,ship12,ship13,ship14,ship15,ship16,ship17]);
+
+var computer = new Player_(f2,comp);
+
+computer.render();
