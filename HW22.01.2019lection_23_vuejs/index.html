@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Task Manager</h1>
+        <div>
+            <ol>
+                <li v-for="item in list1" v-if="item.text">
+                {{ item.text }}
+                </li>
+            </ol>
+            <button @click="transfer1(list)">transfer1</button>
+        </div>
+        <div>
+            <ol>
+                <li v-for="item in list2" v-if="item.text">
+                {{ item.text }}
+                </li>
+            </ol>
+            <button @click="transfer2(list)">transfer2</button>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
