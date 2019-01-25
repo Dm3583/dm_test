@@ -45,9 +45,13 @@ var app = new Vue({
     },
     methods: {
         transfer1(list){
-            return this.list.pop(item);
+            let lastTask=list[list.length-1];
+            return this.list2.unshift(lastTask),list.pop();
         },
-        transfer2(){}
+        transfer2(list){
+            let lastTask=list[list.length-1];
+            return this.list1.unshift(lastTask),list.pop();
+        }
     }
 
   })
