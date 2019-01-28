@@ -47,21 +47,38 @@ var app = new Vue({
     },
     methods: {
         transfer(listA,listB){
-            if(listA.length==0||listB.length==0){ console.log(listA); return}
+            if(listA.length==0||listB.length==0){ return}
             if(listA==this.lists[0]){
                 listB = this.lists[1];
-                console.log(listB);
                 let lastTask=listA[listA.length-1];
                 return listB.unshift(lastTask),listA.pop();
             }
             if(listA==this.lists[1]){
                 listB = this.lists[0];
-                console.log(listB);
                 let lastTask=listA[listA.length-1];
                 return listB.unshift(lastTask),listA.pop();
             }
         }
         
     }
+
+    // or
+    // methods: {
+    //     transfer(listA,listB){
+    //         if(listA.length==0||listB.length==0){ return}
+    //         var trans = function(listA,listB){
+    //             let  lastTask=listA[listA.length-1];
+    //             listB.unshift(lastTask),listA.pop();}
+    //         if(listA==this.lists[0]){
+    //             listB = this.lists[1];
+    //             return trans(listA,listB);
+    //         }
+    //         if(listA==this.lists[1]){
+    //             listB = this.lists[0];
+    //             return trans(listA,listB);
+    //         }
+    //     }
+        
+    // }
 
   })
