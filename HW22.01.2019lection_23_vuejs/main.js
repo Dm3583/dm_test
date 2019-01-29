@@ -45,22 +45,31 @@ var app = new Vue({
                     ]
                 ]
     },
+
     methods: {
         transfer(listA,listB){
             if(listA.length==0||listB.length==0){ return}
-            if(listA==this.lists[0]){
-                listB = this.lists[1];
-                let lastTask=listA[listA.length-1];
-                return listB.unshift(lastTask),listA.pop();
-            }
-            if(listA==this.lists[1]){
-                listB = this.lists[0];
-                let lastTask=listA[listA.length-1];
-                return listB.unshift(lastTask),listA.pop();
-            }
+                let  lastTask=listA[listA.length-1];
+                listB.unshift(lastTask),listA.pop();
         }
+
+
+    // methods: {
+    //     transfer(listA,listB){
+    //         if(listA.length==0||listB.length==0){ return}
+    //         if(listA==this.lists[0]){
+    //             listB = this.lists[1];
+    //             let lastTask=listA[listA.length-1];
+    //             return listB.unshift(lastTask),listA.pop();
+    //         }
+    //         if(listA==this.lists[1]){
+    //             listB = this.lists[0];
+    //             let lastTask=listA[listA.length-1];
+    //             return listB.unshift(lastTask),listA.pop();
+    //         }
+    //     }
         
-    }
+    // }
 
     // or
     // methods: {
@@ -79,6 +88,6 @@ var app = new Vue({
     //         }
     //     }
         
-    // }
+    }
 
   })

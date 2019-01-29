@@ -12,19 +12,19 @@
         <h1>Task Manager</h1>
         <div>
             <ol>
-                <li v-for="item in list1" v-if="item.text">
+                <li v-for="item in lists[0]" v-if="item.text">
                 {{ item.text }}
                 </li>
             </ol>
-            <button @click="transfer1(list1)">transfer1</button>
+            <button @click="transfer(lists[0],lists[1])">transfer1</button>
         </div>
         <div>
             <ol>
-                <li v-for="item in list2" v-if="item.text">
+                <li v-for="item in lists[1]" v-if="item.text">
                 {{ item.text }}
                 </li>
             </ol>
-            <button @click="transfer2(list2)">transfer2</button>
+            <button @click="transfer(lists[1],lists[0])">transfer2</button>
         </div>
     </div>
 
