@@ -1,0 +1,54 @@
+.CardHeader {
+  color: black;
+  font-size: 18px;
+  margin-top: 0px
+}
+
+.CardWrapper{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 500px;
+  padding: 8px;
+  border: 1px #ccc solid;
+  box-shadow: 3px 3px 3px gray;
+  border-radius: 3px
+}
+
+.CardIMGStyle{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: gray;
+  vertical-align: baseline
+}
+
+.ItemInfoWrapper{
+  display: inline-block;
+  width: 370px;
+  margin: 0;
+  padding-left: 10px;
+  vertical-align: top;
+}
+.InfoStr{
+  margin: 0px 0px 5px;
+  color: gray
+}
+
+.AdressWrapper{
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px
+}
+
+.PriceItem{
+  color: purple;
+  margin: 0
+}
+
+.LocatIcon{
+  display: inline-block;
+  height: 35px;
+  width: 25px;
+  background-color: gray;
+  margin-right: 10px
+}
