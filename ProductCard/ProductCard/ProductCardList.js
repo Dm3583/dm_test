@@ -3,36 +3,28 @@ import Button from '../../elements/Button/Button';
 import ItemList from './ItemListFile.JSON';
 import './style.scss';
 
-const itemList = ItemList.list;
-
-// eslint-disable-next-line consistent-return
-// <div>{items.map(item => <div>{item}</div>)}</div>)
-const ProductCardList = () => (
-  <div className="CardWrapper">
-    <img className="CardIMGStyle" src={itemList[0].itemImage} alt="" />
-    <div className="ItemInfoWrapper">
-      <h2 className="CardHeader"><span>{itemList[0].itemName}.</span><span>{itemList[0].itemInformation}</span></h2>
-      <p className="InfoStr">{itemList[0].itemDescription}</p>
-      <div>
-        <div className="LocatIcon"></div>
-        <span className="AdressWrapper">{itemList[0].itemAdress}</span>
-        <span className="PriceItem">{itemList[0].itemPrice}<span>{itemList[0].itemPriceCurrency}</span>/day</span>
-        <Button />
+const ProductCardList = (props) => {
+  const itemList = ItemList.list;
+  const CardContent = props.itemList.map((item) => (
+    <div key={itemList.id} className="CardWrapper">
+      <img className="CardIMGStyle" src={item.itemImage} alt="" />
+      <div className="ItemInfoWrapper">
+        <h2 className="CardHeader"><span>{item.itemName}.</span><span>{item.itemInformation}</span></h2>
+        <p className="InfoStr">{item.itemDescription}</p>
+        <div>
+          <div className="LocatIcon"></div>
+          <span className="AdressWrapper">{item.itemAdress}</span>
+          <span className="PriceItem">{item.itemPrice}<span>{item.itemPriceCurrency}</span>/day</span>
+          <Button />
+        </div>
       </div>
     </div>
-  </div>);
-// const ProductCard = () => (
-//   <div className="CardWrapper">
-//     <img className="CardIMGStyle" src={item[0].itemImage} alt="" />
-//     <div className="ItemInfoWrapper">
-//       <h2 className="CardHeader"><span>{item[0].itemName}.</span><span>{item[0].itemInformation}</span></h2>
-//       <p className="InfoStr">{item[0].itemDescription}</p>
-//       <div>
-//         <div className="LocatIcon"></div>
-//         <span className="AdressWrapper">{item[0].itemAdress}</span>
-//         <span className="PriceItem">{item[0].itemPrice}/day</span>
-//         <Button />
-//       </div>
-//     </div>
-//   </div>);
+  )
+  );
+  return (
+    <div>
+      {CardContent}
+    </div>);
+};
+
 export default ProductCardList;
