@@ -9,13 +9,15 @@ const ProductCardList = (props) => {
     <div key={itemList.id} className="CardWrapper">
       <img className="CardIMGStyle" src={item.itemImage} alt="" />
       <div className="ItemInfoWrapper">
-        <h2 className="CardHeader"><span>{item.itemName}.</span><span>{item.itemInformation}</span></h2>
-        <p className="InfoStr">{item.itemDescription}</p>
-        <div>
-          <div className="LocatIcon"></div>
-          <span className="AdressWrapper">{item.itemAdress}</span>
-          <span className="PriceItem">{item.itemPrice}<span>{item.itemPriceCurrency}</span>/day</span>
-          <Button />
+        <div className="IfoContentAlign">
+          <h2 className="CardHeader"><span>{item.itemName}.</span><span>{item.itemInformation}</span></h2>
+          <p className="InfoStr">{item.itemDescription}</p>
+          <div className="CardFooter">
+            <div className="LocatIcon"></div>
+            <span className="AdressWrapper">{item.itemAdress}</span>
+            <span className="PriceItem">{item.itemPrice}<span>{item.itemPriceCurrency}</span>/day</span>
+            <div className="CardButton"><Button /></div>
+          </div>
         </div>
       </div>
     </div>
