@@ -1,12 +1,10 @@
 import React from 'react';
 import Button from '../../elements/Button/Button';
-import ItemList from './ItemListFile.JSON';
 import './style.scss';
 
 const ProductCardList = (props) => {
-  const itemList = ItemList.list;
   const CardContent = props.itemList.map((item) => (
-    <div key={itemList.id} className="CardWrapper">
+    <div key={item.itemCardID} className="CardWrapper">
       <img className="CardIMGStyle" src={item.itemImage} alt="" />
       <div className="ItemInfoWrapper">
         <div className="IfoContentAlign">
