@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
     <!-- main container -->
-    <div>
-      <aside>
-          <img src="./img/photo_01.jpg" alt="My photo" style = "width: 320px; height: 240;">
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="main-container">
+                <img src="./img/photo_01.jpg" alt="My photo" class="my-photo">
 
-          <!-- contacts container -->
-          <div>
-              <h3>Contacts</h3>
-              
-              <div>
-                  C: <a href="tel:38 095 113 85 98">+38 095 113 85 98</a>
+                <!-- contacts container -->
+                <div class="contacts-container">
+                    <h3 class="contacts-title">Contacts</h3>
+
+                    <div>
+                        <span class="contacts-link-type">C:</span> <a class="contacts-link" href="tel:38 095 113 85 98">+38 095 113 85 98</a>
+                    </div>
+                    <div>
+                        <span class="contacts-link-type">E:</span> <a class="contacts-link" href="mailto:chornyiav@gmail.com">chornyiav@gmail.com</a>
+                    </div>
                 </div>
-              <div>
-                  E: <a href="mailto:chornyiav@gmail.com">chornyiav@gmail.com</a>
+
+                <!-- Tech Skills container -->
+                <div class="tech-skills-container">
+                    <h3 class="tech-skills-title">Tech Skills</h3>
+                    <ul>
+                        <li class="tech-skills-item"> <span class="tech-skills-text">HTML5</span> </li>
+                        <li class="tech-skills-item"><span class="tech-skills-text">CSS3</span></li>
+                        <li class="tech-skills-item"><span class="tech-skills-text">GIT</span></li>
+                        <li class="tech-skills-item"><span class="tech-skills-text">WebPack</span></li>
+                        <li class="tech-skills-item"><span class="tech-skills-text">JavaScript</span></li>
+                        <li class="tech-skills-item"><span class="tech-skills-text">React.js</span></li>
+                        <li class="tech-skills-item"><span class="tech-skills-text">Node.js</span></li>
+                    </ul>
                 </div>
-          </div>
 
-          <!-- Tech Skills container -->
-          <div>
-              <h3>Tech Skills</h3>
-              <ul>
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>GIT</li>
-                  <li>WebPack</li>
-                  <li>JavaScript</li>
-                  <li>React.js</li>
-                  <li>Node.js</li>
-              </ul>
-          </div>
+                <!-- Soft Skills -->
+                <div class="soft-skills-container">
+                    <h3 class="soft-skills-title">Soft Skills</h3>
+                    <ul>
+                        <li class="soft-skills-item"> <span class="soft-skills-text">Scrum</span></li>
+                        <li class="soft-skills-item"> <span class="soft-skills-text">Agile</span> </li>
+                        <li class="soft-skills-item"> <span class="soft-skills-text">GTD</span> </li>
+                        <li class="soft-skills-item"> <span class="soft-skills-text">Teamwork</span> </li>
+                    </ul>
 
-          <!-- Soft Skills -->
-          <div>
-              <h3>Soft Skills</h3>
-              <ul>
-                  <li>Scrum</li>
-                  <li>Agile</li>
-                  <li>GTD</li>
-                  <li>Teamwork</li>
-              </ul>
+                </div>
 
-          </div>
-      </aside>
+            </div>
+        </aside>
 
-      <!-- about me container -->
-      <div>
-        <!-- about me main info -->
-        <div>
-          <h2>Front-End Developer</h2>
-          <h1>Pankov Dmytro</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
-          </p>
-        </div>
+        <!-- about me container -->
+        <div class="about-me-container">
+            <!-- about me main info -->
+            <div>
+                <h2>Front-End Developer</h2>
+                <h1>Pankov Dmytro</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                </p>
+            </div>
 
-        <!-- project container -->
-        <div>
-          <h3>Projects</h3>
-          <ol>
-            <li>
-              <a href="https://lovecamp.allinsol.com/"
-                >https://lovecamp.allinsol.com/</a
+            <!-- project container -->
+            <div>
+                <h3>Projects</h3>
+                <ol>
+                    <li>
+                        <a href="https://lovecamp.allinsol.com/">https://lovecamp.allinsol.com/</a
               ><span>.........</span>
               <span>[ HTML5, CSS3 ]</span>
             </li>
@@ -150,7 +153,7 @@
           <div>
             <h4>Kharkiv National University of Radioelectronics</h4>
             <h5>Management</h5>
-            <span></span>Septermber 2009 - June 2014 | Ukraine</span>
+            <span>Septermber 2009 - June 2014 | Ukraine</span>
           </div>
         </div>
       </div>
