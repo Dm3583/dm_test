@@ -1,0 +1,22 @@
+{
+  "name": "my-test-node",
+  "version": "1.0.0",
+  "description": "my-node.js-test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Pankov Dmytro <test@mail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
