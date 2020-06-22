@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const bcrypt = require('bcryptjs');
 
-const config = require(config);
+const config = require('config');
 
 const { check, validationResult } = require('express-validator');
 
@@ -23,6 +23,8 @@ router.post(
     ],
     async (req, res) => {
         try {
+
+            console.log('Body: ', req.body)
 
             const errors = validationResult(req);
 
