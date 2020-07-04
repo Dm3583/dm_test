@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const bcrypt = require('bcryptjs');
 
-const config = require(config);
+const config = require('config');
 
 const { check, validationResult } = require('express-validator');
 
@@ -15,13 +15,12 @@ const router = Router();
 // /api/auth/register
 
 router.post(
-    '/register',
-    [
+    '/register', [
         check('email', 'Wrong email').isEmail(),
         check('password', 'Minimum length of password is 6 symbols')
-            .isLength({ min: 6 })
+        .isLength({ min: 6 })
     ],
-    async (req, res) => {
+    async(req, res) => {
         try {
 
             const errors = validationResult(req);
@@ -53,22 +52,23 @@ router.post(
 
             await user.save();
 
-            res.status(201).json({ message: 'User is created' })
+            res.status(201).json({ message: '!!!User is created!!!' })
 
         } catch (e) {
-            res.status(500).json({ message: 'Something went wrong, try again' })
+            res.status(500).json({ message: '!!!Something went wrong, try again!!!' })
         }
     });
 
 // /api/auth/login
 
-router.post('/login',
-    [
+router.post(
+        '/login',
+        [
 
         check('email', 'Enter correct email').normalizeEmail().isEmail(),
         check('password', 'Enter the password').exists()
-    ],
-    async (req, res) => {
+        ],
+    async(req, res) => {
         try {
 
             const errors = validationResult(req);
@@ -79,7 +79,7 @@ router.post('/login',
 
                     errors: errors.array(),
 
-                    message: 'Wrong login data'
+                    message: '!!!Wrong login data!!!'
 
                 })
             }
@@ -90,7 +90,7 @@ router.post('/login',
 
             if (!user) {
 
-                return res.status(400).json({ message: 'The user is not found' })
+                return res.status(400).json({ message: '!!!The user is not found!!!' });
 
             }
 
@@ -98,7 +98,7 @@ router.post('/login',
 
             if (!isMatch) {
 
-                return res.status(400).json({ message: 'Wrong password, try again' })
+                return res.status(400).json({ message: '!!!Wrong password, try again!!!' });
 
             }
 
@@ -116,7 +116,7 @@ router.post('/login',
 
 
         } catch (e) {
-            res.status(500).json({ message: 'Something went wrong, try again' })
+            res.status(500).json({ message: '!!!Something went wrong, try again!!!' })
         }
     });
 
