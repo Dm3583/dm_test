@@ -16,16 +16,16 @@ const router = Router();
 
 router.post(
     '/register', [
-        check('email', 'Wrong email').isEmail(),
+        check('email', '!!!Wrong email!!!').isEmail(),
         check('password', 'Minimum length of password is 6 symbols')
         .isLength({ min: 6 })
     ],
     async(req, res) => {
         try {
-
+            console.log('!!!Body!!!  ',req.body);
             const errors = validationResult(req);
 
-            if (errors.isEmpty()) {
+            if (!errors.isEmpty()) {
 
                 return res.status(400).json({
 
@@ -73,7 +73,7 @@ router.post(
 
             const errors = validationResult(req);
 
-            if (errors.isEmpty()) {
+            if (!errors.isEmpty()) {
 
                 return res.status(400).json({
 

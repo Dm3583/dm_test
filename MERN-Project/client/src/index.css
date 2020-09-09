@@ -1,9 +1,9 @@
-@import "../node_modules/materialize-css/dist/css/materialize.min.css"; 
-
+/* @import "../node_modules/materialize-css/dist/css/materialize.min.css";  */
+@import "~materialize-css/dist/css/materialize.min.css"; 
 .input-field>label{
     position: absolute!important;
-    top: -23px!important;
-    padding: 0 26px !important;
+
+    padding: 0 31px !important;
 }
 
 .input-field{
