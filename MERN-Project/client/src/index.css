@@ -1,25 +1,37 @@
-@import "../node_modules/materialize-css/dist/css/materialize.min.css";
+/* @import "../node_modules/materialize-css/dist/css/materialize.min.css";  */
+@import "~materialize-css/dist/css/materialize.min.css"; 
+.input-field>label{
+    position: absolute!important;
 
-input.yellow-input {
-  border-bottom: 1px solid #fff !important;
-  box-shadow: 0 1px 0 0 #fff !important;
+    padding: 0 31px !important;
 }
 
-input.yellow-input + label {
-  color: #fff !important;
+.input-field{
+    padding: 0 26px !important;
 }
 
-input.yellow-input:focus + label {
-  color: #ffeb3b !important;
+.input-field>input{
+    box-sizing: border-box !important;
 }
 
-input.yellow-input:focus {
-  border-bottom: 1px solid #ffeb3b !important;
-  box-shadow: 0 1px 0 0 #ffeb3b !important;
+input.yellow-input{
+    border-bottom: 1px solid #fff!important;
+    box-shadow: 0 1px 0 0 #fff !important;
+    box-sizing: border-box !important;
 }
 
-.input-field > label {
-  position: absolute;
-  top: -25px !important;
-  font-size: 0.8em;
+input.yellow-input+label{
+    color: #ffffff !important;
 }
+
+input.yellow-input:focus{
+    border-bottom: 1px solid #ffeb3b !important;
+    box-shadow: 0 1px 0 0 #ffeb3b !important;
+}
+
+input.yellow-input:focus+label{
+    color: #ffeb3b!important
+
+}
+
+

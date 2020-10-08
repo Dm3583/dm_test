@@ -1,0 +1,7 @@
+@import "./header.css";
+@import "./footer.css";
+
+body {
+  background-color: teal;
+  position: relative;
+}
